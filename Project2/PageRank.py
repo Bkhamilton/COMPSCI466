@@ -3,9 +3,9 @@
 
 #Start with Pseudocode
 def pageRank(G):
-  pages = G.pages
-  links = G.links
+  pages = G.vertices
+  links = G.edges
   
   numPages = pages.length()
-  
+  #I,R = PageRank estimate
   
