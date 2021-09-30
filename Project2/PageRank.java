@@ -18,10 +18,13 @@ public class pageRank {
     
     numPages = pages.length();
     Map<String, Double> I = new HashMap<String, Double>();
-      
-    
-    
     Map<String, Double> R = new HashMap<String, Double>();
+    
+    //For each key in G...
+    //I.put(key, 1.0/G.size())
+    
+    //While not converged...
+    
     
     return R;
   }
