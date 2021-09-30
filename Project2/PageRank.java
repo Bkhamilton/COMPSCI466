@@ -22,6 +22,9 @@ public class pageRank {
     
     //For each key in G...
     //I.put(key, 1.0/G.size())
+    for (page in pages) {
+      I.put(page, 1.0/numPages)
+    }   
     
     //While not converged...
     
