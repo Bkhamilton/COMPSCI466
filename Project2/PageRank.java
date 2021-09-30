@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Graph {
-  String[] pages;
-  String[] links;
+  String[] vertices;
+  String[] edges;
 }
 
 public class pageRank {
@@ -13,6 +13,8 @@ public class pageRank {
   
   
   public static double PageRank(Graph G) {
+    String[] pages = G.vertices;
+    String[] links = G.edges;
       
   }
   
