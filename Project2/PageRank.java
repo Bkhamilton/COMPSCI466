@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Graph {
   String[] vertices;
-  Arraylist edges = new Arraylist();
+  ArrayList edges = new ArrayList();
 }
 
 public class pageRank {
