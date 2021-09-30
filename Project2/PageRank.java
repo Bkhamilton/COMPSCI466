@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Graph {
   String[] vertices;
-  String[] edges;
+  Arraylist edges = new Arraylist();
 }
 
 public class pageRank {
@@ -14,7 +14,7 @@ public class pageRank {
   //Graph has (V,E), where V is pages and E is links
   public static Map<String, Double> PageRank(Graph G) {
     String[] pages = G.vertices;
-    String[] links = G.edges;
+    SArraylist links = G.edges;
     
     numPages = pages.length();
     Map<String, Double> I = new HashMap<String, Double>();
