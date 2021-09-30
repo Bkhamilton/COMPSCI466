@@ -14,7 +14,7 @@ public class pageRank {
   //Graph has (V,E), where V is pages and E is links
   public static Map<String, Double> PageRank(Graph G) {
     String[] pages = G.vertices;
-    SArraylist links = G.edges;
+    ArrayList links = G.edges;
     
     numPages = pages.length();
     Map<String, Double> I = new HashMap<String, Double>();
