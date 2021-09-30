@@ -11,17 +11,19 @@ public class pageRank {
   static final double tau = 0.0001;
   
   
-  
-  public static double PageRank(Graph G) {
+  //Graph has (V,E), where V is pages and E is links
+  public static Map<String, Double> PageRank(Graph G) {
     String[] pages = G.vertices;
     String[] links = G.edges;
       
+    numPages = pages.length();
+    
+    Map<String, Double> R = new HashMap<String, Double>();
+    
+    return R;
   }
   
   public static void main(String[] args) {
-    Map<String, Double> map = new HashMap<String, Double>();
-    
-    
     System.out.println("Hello");
   }
 }
