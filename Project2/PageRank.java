@@ -15,8 +15,11 @@ public class pageRank {
   public static Map<String, Double> PageRank(Graph G) {
     String[] pages = G.vertices;
     String[] links = G.edges;
-      
+    
     numPages = pages.length();
+    Map<String, Double> I = new HashMap<String, Double>();
+      
+    
     
     Map<String, Double> R = new HashMap<String, Double>();
     
