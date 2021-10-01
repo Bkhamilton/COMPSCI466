@@ -26,7 +26,25 @@ public class pageRank {
       I.put(page, 1.0/numPages)
     }   
     
-    //While not converged...
+    while (R has not converged) {
+      
+      for (key in G) {
+        R.put(key, lambda/G.size())
+      }
+      
+      List<String> Q = new ArrayList<String>()
+      for (page in pages) {
+        Q.add(G.get(page))
+      }
+      if (Q.size() == 0) {
+        
+        
+      } else {
+        
+        
+      }
+      
+    }
     
     
     return R;
