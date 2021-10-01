@@ -1,5 +1,6 @@
 import java.util.*;
 
+//Ignore this. If I can, I will take a graph class from the internet
 public class Graph {
   String[] vertices;
   ArrayList edges = new ArrayList();
@@ -42,10 +43,12 @@ public class pageRank {
       }
       for (p in pages) {
         if (Q.size() == 0) {
+          //Need to codify "all q in Q" 
           for (all q in Q) {
             R.put(q, R.get(q) + (1-lambda) * I.get(p)/Q.size())
           }
         } else {
+          //Need to codify "all q in P"
           for (all q in P) {
             R.put(q, R.get(q) + (1-lambda) * I.get(p)/G.size())
           }
@@ -75,5 +78,7 @@ public class pageRank {
   
   public static void main(String[] args) {
     System.out.println("Hello");
+    //First needs to call load(Mega File)
+    //Second needs to run pageRank on all pages in file.
   }
 }
