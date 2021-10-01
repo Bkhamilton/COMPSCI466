@@ -33,16 +33,21 @@ public class pageRank {
       }
       
       List<String> Q = new ArrayList<String>()
-      for (page in pages) {
-        Q.add(G.get(page))
+      for (p in pages) {
+        Q.add(G.get(p))
       }
-      if (Q.size() == 0) {
-        
-        
-      } else {
-        
-        
+      for (p in pages) {
+        if (Q.size() == 0) {
+          for (all q in Q) {
+            R.put(q, R.get(q) + (1-lambda) * I.get(p)/Q.size())
+          }
+        } else {
+          for (all q in P) {
+            R.put(q, R.get(q) + (1-lambda) * I.get(p)/G.size())
+          }
+        }      
       }
+
       
     }
     
@@ -50,6 +55,7 @@ public class pageRank {
     return R;
   }
   
+  //Func to read .gz files. Taken from lecture
   public void load(String inFile) {
     try {
       BufferedReader br = new BufferedReader(
