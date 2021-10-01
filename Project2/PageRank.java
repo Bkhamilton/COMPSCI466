@@ -13,6 +13,8 @@ public class pageRank {
   
   //Graph has (V,E), where V is pages and E is links
   public static Map<String, Double> PageRank(Graph G) {
+    
+    //Unsure about type for these. pages is fine, links might need to be an arraylist of arraylists
     String[] pages = G.vertices;
     ArrayList links = G.edges;
     
@@ -26,14 +28,15 @@ public class pageRank {
       I.put(page, 1.0/numPages)
     }   
     
+    //Need to codify "R has not converged"
     while (R has not converged) {
-      
+      //Need to codify "for each key in G" also
       for (key in G) {
         R.put(key, lambda/G.size())
       }
       
       List<String> Q = new ArrayList<String>();
-      
+      //Fill Q with (p,q) pairs from G.Edges
       for (p in pages) {
         Q.add(G.get(p))
       }
