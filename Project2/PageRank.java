@@ -25,23 +25,23 @@ public class pageRank {
     
     //For each key in G...
     //I.put(key, 1.0/G.size())
-    for (page in pages) {
+    for (String page : pages) {
       I.put(page, 1.0/numPages)
     }   
     
     //Need to codify "R has not converged"
     while (R has not converged) {
       //Need to codify "for each key in G" also
-      for (key in G) {
+      for (String key : G) {
         R.put(key, lambda/G.size())
       }
       
       List<String> Q = new ArrayList<String>();
       //Fill Q with (p,q) pairs from G.Edges
-      for (p in pages) {
+      for (String p : pages) {
         Q.add(G.get(p))
       }
-      for (p in pages) {
+      for (String p : pages) {
         if (Q.size() == 0) {
           //Need to codify "all q in Q" 
           for (all q in Q) {
