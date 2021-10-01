@@ -50,6 +50,20 @@ public class pageRank {
     return R;
   }
   
+  public void load(String inFile) {
+    try {
+      BufferedReader br = new BufferedReader(
+        new InputStreamReader(
+          new GZIPInputStream(
+            new FileInputStream(inFile)),
+          "UTF-8"));
+      String s;
+      while((s = br.readLine()) != null) {
+        //DO STUFF
+      }
+    }
+  }
+  
   public static void main(String[] args) {
     System.out.println("Hello");
   }
