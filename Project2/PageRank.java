@@ -32,7 +32,8 @@ public class pageRank {
         R.put(key, lambda/G.size())
       }
       
-      List<String> Q = new ArrayList<String>()
+      List<String> Q = new ArrayList<String>();
+      
       for (p in pages) {
         Q.add(G.get(p))
       }
@@ -47,8 +48,7 @@ public class pageRank {
           }
         }      
       }
-
-      
+      I = R;
     }
     
     
@@ -65,7 +65,7 @@ public class pageRank {
           "UTF-8"));
       String s;
       while((s = br.readLine()) != null) {
-        //DO STUFF
+        //DO STUFF TO s
       }
     }
   }
