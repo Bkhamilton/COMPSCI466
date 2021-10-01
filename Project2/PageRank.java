@@ -25,14 +25,14 @@ public class pageRank {
     
     //For each key in G...
     //I.put(key, 1.0/G.size())
-    for (String page : pages) {
-      I.put(page, 1.0/numPages)
+    for (String key : pages) {
+      I.put(key, 1.0/numPages)
     }   
     
     //Need to codify "R has not converged"
     while (R has not converged) {
-      //Need to codify "for each key in G" also
-      for (String key : G) {
+      //This for loop likely does not work. Not sure how to do For-each with G
+      for (String key : pages) {
         R.put(key, lambda/G.size())
       }
       
@@ -43,13 +43,13 @@ public class pageRank {
       }
       for (String p : pages) {
         if (Q.size() == 0) {
-          //Need to codify "all q in Q" 
-          for (all q in Q) {
+          //for all q in Q
+          for (String q : Q) {
             R.put(q, R.get(q) + (1-lambda) * I.get(p)/Q.size())
           }
         } else {
-          //Need to codify "all q in P"
-          for (all q in P) {
+          //for all q in P
+          for (String q : pages) {
             R.put(q, R.get(q) + (1-lambda) * I.get(p)/G.size())
           }
         }      
