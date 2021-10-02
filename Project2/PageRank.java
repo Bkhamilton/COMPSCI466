@@ -23,15 +23,14 @@ public class pageRank {
     Map<String, Double> I = new HashMap<String, Double>();
     Map<String, Double> R = new HashMap<String, Double>();
     
-    //For each key in G...
-    //I.put(key, 1.0/G.size())
+    //Add each page in P to I
     for (String key : pages) {
       I.put(key, 1.0/numPages)
     }   
     
     //Need to codify "R has not converged"
     while (R has not converged) {
-      //This for loop likely does not work. Not sure how to do For-each with G
+      //Add each page in P to R
       for (String key : pages) {
         R.put(key, lambda/G.size())
       }
